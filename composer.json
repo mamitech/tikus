@@ -1,0 +1,30 @@
+{
+    "name": "mamikos/tikus",
+    "description": "An abstract layer for remote error reporting",
+    "keywords": ["mamikos", "tikus"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^7.4",
+        "bugsnag/bugsnag-laravel": "^2.0",
+        "sentry/sentry-laravel": "^2.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mamikos\\Tikus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
