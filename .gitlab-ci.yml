@@ -1,0 +1,35 @@
+image: devmamiops/pelari:php74node16-composer2
+
+stages:
+  - preparation
+  - test
+
+default:
+  interruptible: true
+
+composer:
+  stage: preparation
+  script:
+    - php -v
+    - composer install
+    - composer dump-autoload
+  cache:
+    key:
+      files:
+        - composer.lock
+    paths:
+      - vendor/
+
+phpunit:
+  stage: test
+  dependencies:
+    - composer
+  script:
+    - vendor/bin/phpunit --testdox 
+  cache:
+    key:
+      files:
+        - composer.lock
+    policy: pull
+    paths:
+      - vendor/
