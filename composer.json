@@ -5,8 +5,10 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.4",
-        "bugsnag/bugsnag-laravel": "^2.0",
+        "php": ">=7.4",
+        "bugsnag/bugsnag": "^3.26.0",
+        "bugsnag/bugsnag-laravel": "^2.22.0",
+        "laravel/framework": "^6.0",
         "sentry/sentry-laravel": "^2.12"
     },
     "require-dev": {
