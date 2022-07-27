@@ -32,15 +32,16 @@ class PingCommand extends Command
         }
 
         $asException = $this->option('as-exception');
+        $tikus = new Tikus();
 
         if ($asException === true)
         {
-            Tikus::reportException(new Exception($message));
+            $tikus->reportException(new Exception($message));
             $this->info('An exception has been sent!');
         }
         else
         {
-            Tikus::reportError('Ping', $message);
+            $tikus->reportError('Ping', $message);
             $this->info('A message has been sent!');
         }
     }
