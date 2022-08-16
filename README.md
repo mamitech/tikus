@@ -49,7 +49,7 @@ Register an alias in `config/app.php`:
 
 Put this code in `report` method of `app/Exceptions/Handler.php`
 
-```
+```php
 use Tikus;
 
 ...
