@@ -47,6 +47,22 @@ Register an alias in `config/app.php`:
 ],
 ```
 
+Put this code in `report` method of `app/Exceptions/Handler.php`
+
+```
+use Tikus;
+
+...
+
+public function report(Exception $exception)
+{
+    if ($this->shouldReport($exception)) {
+        Tikus::reportException($exception);
+    }
+    parent::report($exception);
+}
+```
+
 To use the configured Bugsnag client, import an alias each time:
 
 ```php
