@@ -82,6 +82,11 @@ SENTRY_ENVIRONMENT="${APP_ENV}"
 SENTRY_LARAVEL_DSN=your-sentry-dsn
 ```
 
+# Methods
+
+Please refer to our wiki
+- https://mamikos.atlassian.net/wiki/spaces/MAMIKOS/pages/2425815268/Introduce+Tikus+-+Mamikos+remote+error+reporting#Methods
+
 ## See more
 - [Bugsnag - Reporting unhandled exceptions](https://docs.bugsnag.com/platforms/php/laravel/#reporting-unhandled-exceptions)
 
