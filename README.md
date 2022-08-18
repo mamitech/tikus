@@ -1,4 +1,4 @@
-# mamikos/tikus
+# mamitech/tikus
 
 Add Tikus to report your errors to remote error reporting systems such as Bugsnag and Sentry. 
 
@@ -11,13 +11,13 @@ Merge this into your composer.json
 ```json
   ...
   "require": {
-    "mamikos/tikus": "^0.1.0"
+    "mamitech/tikus": "^1.0"
   }
   ...
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://langit.kerupux.com:3009/mamikos-be/tikus.git"
+      "url": "https://github.com/mamitech/tikus.git"
     }
   ],
   ...
