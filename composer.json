@@ -1,7 +1,7 @@
 {
-    "name": "mamikos/tikus",
+    "name": "mamitech/tikus",
     "description": "An abstract layer for remote error reporting",
-    "keywords": ["mamikos", "tikus"],
+    "keywords": ["mamikos", "tikus", "mamiteam", "mamitech"],
     "license": "MIT",
     "type": "project",
     "require": {
