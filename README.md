@@ -84,9 +84,46 @@ SENTRY_LARAVEL_DSN=your-sentry-dsn
 
 # Methods
 
-Please refer to our wiki
-- https://mamikos.atlassian.net/wiki/spaces/MAMIKOS/pages/2425815268/Introduce+Tikus+-+Mamikos+remote+error+reporting#Methods
+## reportException(Throwable $throwable, Array $metadata = [])
+- throwable: Any Throwable, Any Exception
+- metadata: metadata in array
 
-## See more
-- [Bugsnag - Reporting unhandled exceptions](https://docs.bugsnag.com/platforms/php/laravel/#reporting-unhandled-exceptions)
+### Usage
 
+```php
+use Tikus;
+...
+catch (Exception $e)
+{
+  Tikus::reportException($e);
+}
+```
+
+```php
+Tikus::reportException(new Exception('Data not found'), [
+  'data_id': $data->id
+]);
+```
+
+## reportError($name, $message, Array $metadata = [])
+- name: error type
+- message: error message
+- metadata: metadata in array
+
+### Usage
+
+```php
+use Tikus;
+
+Tikus::reportError('Info', 'Data is expired');
+
+Tikus::reportError('Info', 'Data is expired', ['expired_at': '2022-07-01 12:59:00']);
+
+// supports nested array
+Tikus::reportError('Info', 'My wishlist is', [
+  'wishlist': [
+    'game': 'overwatch 2',
+    'movie': 'topgun: maverick'
+  ]
+]);
+```
