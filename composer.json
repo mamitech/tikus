@@ -26,6 +26,16 @@
             "Tests\\": "tests/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mamikos\\Tikus\\Providers\\TikusServiceProvider"
+            ],
+            "aliases": {
+                "Tikus": "Mamikos\\Tikus\\Facades\\TikusFacade"
+            }
+        }
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
